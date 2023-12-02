@@ -240,7 +240,7 @@ import openai
 from dotenv import load_dotenv
 path = ''
 load_dotenv(path + '.env')
-openai.api_key = os.getenv("OPENAI_API_KEY_karthik")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def ask_chatGPT(text, model, max_tokens, count):
     # time.sleep(30)
