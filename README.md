@@ -10,6 +10,7 @@ Architectural Knowledge Management (AKM) involves the organized handling of info
 ## Repository suructure
 
 1. code
+    - test_env.yml contains the required packages. One can create a conda env from this file with the command: <br> conda env create -f test_env.yml
     - adr.py contains code for all 0-shot and few-shot experiments, for all models.
     - training.ipynb contains code for finetuning and inference.
 2. data
