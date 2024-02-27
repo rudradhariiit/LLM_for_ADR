@@ -16,3 +16,20 @@ Architectural Knowledge Management (AKM) involves the organized handling of info
 2. data
     - The collected data after preprocessing is in 0_shot.csv and few_shot.csv. The models ingest data from these two files.
     - To view the original collected data unzip the zip files provided.
+3. Simplefied_Example
+       Running the whole code with all the data will take time, compute power and OpenAI api credits. Hence in the Simplified_Example.md file we record the way to execute a simgle sample.
+
+## Steps to run
+
+1. Create a conda environment with code/test_env.yml file with the command: <br> conda env create -f test_env.yml
+2. Creat a .env file and save you OpenAI api key as: <br> YOUR_KEY=******
+3. Run the adr.py file to execute all the 0-shot and few-shot experiments.
+    - This might take many hours and OpemAI credits ($10 - $20)
+    - To run only experiments based on GPT models, comment T5 specific codes (after line 354)
+    - To run only experiments based on T5 models, comment GPT specific codes (from like 150 to 354)
+4. Execute training.ipynb notebook to train and test LLMs for generating Design Decisions
+
+## System Specification
+
+1. The experiments were run on Ubuntu version 18.04 with python installed.
+2. The experiments were run on a high-performance compute node with 40 cores, 80GB ram and 4 GPUs ranging from 'NVIDIA GeForce RTX 2080' to 'NVIDIA GeForce RTX 3080' each with 12GB GPU RAM.
